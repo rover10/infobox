@@ -1,51 +1,79 @@
-<html>
-	<head>
-		<title>
-			infoBox
-		</title>
-        <link rel="stylesheet" href="css/infobox.css" type="text/css">
-        
-        <script src="scripts/jquery.min.js"></script>
-        <script src="scripts/controller.js"></script>
-        
-	</head>
-	<body>
-		<div id="outer">
-			<div class="header" id="header" >
-			
-			</div>
-			<div class="formContainer" id="formContainer">
-				<div class="allForms">
-					<div class="formsName" id="formsName">
-						<div class="fname" id="basic"><a href="#" onclick="getData()">Basic</a></div>
-						<div class="fname" id="education">Education </div>
-						<div class="fname" id="skills">Skills </div>
-						<div class="fname" id="employment">Employment </div>
-						<div class="fname" id="contacts">Contacs </div>
-						<div class="fname" id="projects"> Projects</div>
-						<div class="fname" id="awards">Awards </div>
-						<div class="fname" id="achievements">Achievements </div>
-						<div class="fname" id="more">More</div>
-                        
-					</div>
-					<div class="formsBody" id="FormsBody">
-                        <div class="" id="basicForm">
-                            <div>
-                                <div id="userFName">
-                                    <BR><BR><BR><BR><BR><BR><BR><BR>
-                                    <span>First Name</span>
-                                    <span id=userFNameValue></span>
-                                 </div>
-                            </div>
-                            
+    <html>
+        <head>
+            <title>
+                infoBox
+            </title>
+            <link rel="stylesheet" href="css/infobox.css" type="text/css">
+
+            <script src="scripts/jquery.min.js"></script>
+            <script src="scripts/controller.js"></script>
+
+        </head>
+        <body>
+            <div id="outer">
+                <div class="header" id="header" >
+
+                </div>
+                <div class="formContainer" id="formContainer">
+                    <div class="allForms" align="center"    >
+                        <div class="formsName" id="formsName" >
+                            <div class="fname" id="basic"><a href="#" onclick="showBasicForm()">Basic</a></div>
+                            <div class="fname" id="education">Education </div>
+                            <div class="fname" id="skills">Skills </div>
+                            <div class="fname" id="employment">Employment </div>
+                            <div class="fname" id="contacts">Contacs </div>
+                            <div class="fname" id="projects"> Projects</div>
+                            <div class="fname" id="awards">Awards </div>
+                            <div class="fname" id="achievements">Achievements </div>
+                            <div class="fname" id="more">More</div>
+
                         </div>
-					</div>
-				</div>
-			</div>
-			
-		</div>
-        <div id="serverdata">
-            
-        </div>
-	</body>
-</html>
+                        <div class="formsBody" id="FormsBody">
+                            <div class="basicForm" id="basicForm" >
+                            <div class="formHeader"> Basic Details</div>
+
+                            <div  class="tablestu">
+                            <table >
+                            <tr>
+                            <td Style="font-size:18px" class="auto-style3">First Name :</td>
+                            <td>&nbsp <input type="text" id="t1" /></td>
+                            </tr>
+                            <tr>
+                            <td Style="font-size:18px" class="auto-style3">Middle Name :</td>
+                            <td>&nbsp; <input type="text" id="t2" /></td>
+                            </tr>
+                            <tr>
+                            <td Style="font-size:18px" class="auto-style3">Last Name :</td>
+                            <td>&nbsp; <input type="text" id="t3" /></td>
+                            </tr>
+                            <tr>
+                            <td Style="font-size:18px" class="auto-style3">Date of Birth :</td>
+                            <td>&nbsp; <input type="datetime-local" /> </td>
+                            </tr>
+                            <tr>
+                            <td Style="font-size:18px" class="auto-style3">Nick Name :</td>
+                            <td>&nbsp; <input type="text" id="Text1" /></td>
+                            </tr>
+                            <tr>
+                            <td Style="font-size:18px" class="auto-style3">Marntial State :</td>
+                            <td>&nbsp;<input type="radio"  name="m"/>Married <input type="radio" name="m" />Umarried</td>
+             </tr>
+         </table> 
+         <br /><br />
+         <button id="save"><strong>Save</a></strong></button>                        
+         <button id="clear"><strong>Clear</a></strong></button>
+     </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div id="serverdata">
+
+            </div>
+        </body>
+    </html>

@@ -31,7 +31,8 @@
     background-color:beige;
     border-width: thin;
     border-bottom-color: aqua;
-    
+    width:100%;
+    //vertical-align: middle;
 }
 
 .allForms{
@@ -40,4 +41,36 @@
 }
 .formsBody{
   
+}
+
+.basicForm{
+    display: none;
+    position: relative;
+    width: inherit;
+    top:50px;
+}
+
+.formHeader{
+    font-size:20px;
+    color:dimgray;
+    text-align:center;
+    position: relative;
+    top: 50px;
+}
+
+.tablestu{
+    align-content: center;
+    position: relative;
+    margin-top: 60px;
+    align-items: center;
+    width:100%;
+}
+
+.formContainer{
+    width: inherit;
+}
+
+.outer{
+    width: inherit;
+    
 }

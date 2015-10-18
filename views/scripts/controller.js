@@ -18,3 +18,9 @@ function getData(){
                     }
                 );
             }
+
+
+
+function showBasicForm(){
+    $("#basicForm").show();
+}
