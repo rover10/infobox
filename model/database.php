@@ -16,9 +16,16 @@ $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     // output data of each row
+    $data = "";
+    $i =0;
     while($row = $result->fetch_assoc()) {
-        echo "Name: " . $row["Name"]. " - Roll" . $row["Roll"]. "<br>";
+        //echo "Name: " . $row["Name"]. " - Roll" . $row["Roll"]. "<br>";
+    if($i != 0)
+        $data = $data . ",";    
+    $data = $data .'{"name":' .'"' .$row["Name"] . '",' . '"roll":' .'"'. $row["Roll"] .'"}' ;
+        $i++;
     }
+    echo '{ "record":[' . $data . ']}';
 } else {
     echo "0 results";
 }

@@ -17,7 +17,8 @@
             allRecords = data.record;
         
             for(x in allRecords){                
-                    alert(allRecords[x].name);
+                //alert(allRecords[x].roll);
+               $("#serverdata").append("<Div>" + allRecords[x].name + "  " + allRecords[x].roll + " " + "</Div>");
             }
         }
         if(statusTxt == "error")
@@ -30,6 +31,10 @@
         
 	</head>
 	<body>
+        <div id="serverdata">
+            
+        </div>
+        
 		<div id="outer">
 			<div class="header" id="header" >
 			
