@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
-$username = "rakesh";
-$password = "rakesh123";
+$username = "root";
+$password = "";
 $dbname = "students";
 
 // Create connection
@@ -17,7 +17,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        echo "Name: " . $row["Name"]. " - Roll" . $row["Roll"]. " " . $row["lastname"]. "<br>";
+        echo "Name: " . $row["Name"]. " - Roll" . $row["Roll"]. "<br>";
     }
 } else {
     echo "0 results";
