@@ -1,0 +1,68 @@
+<html>
+	<head>
+		<title>
+			infoBox
+		</title>
+        <link rel="stylesheet" href="css/infobox.css" type="text/css">
+        
+        <script src="scripts/jquery.min.js"></script>
+        <script>
+            function getData(){
+                $(document).ready(
+                    function(){
+                          $("#userFNameValue").load("http://localhost/infobox/model/database.php", function(responseTxt, statusTxt, xhr){
+        // $("#userFNameValue").load(xhr.setRequestHeader);          
+        if(statusTxt == "success"){
+            data = JSON.parse(responseTxt); /// Parsing the object
+            allRecords = data.record;
+        
+            for(x in allRecords){                
+                    alert(allRecords[x].name);
+            }
+        }
+        if(statusTxt == "error")
+            alert("Error: " + xhr.status + ": " + xhr.statusText);
+    });   
+                    }
+                );
+            }
+        </script>
+        
+	</head>
+	<body>
+		<div id="outer">
+			<div class="header" id="header" >
+			
+			</div>
+			<div class="formContainer" id="formContainer">
+				<div class="allForms">
+					<div class="formsName" id="formsName">
+						<div class="fname" id="basic"><a href="#" onclick="getData()">Basic</a></div>
+						<div class="fname" id="education">Education </div>
+						<div class="fname" id="skills">Skills </div>
+						<div class="fname" id="employment">Employment </div>
+						<div class="fname" id="contacts">Contacs </div>
+						<div class="fname" id="projects"> Projects</div>
+						<div class="fname" id="awards">Awards </div>
+						<div class="fname" id="achievements">Achievements </div>
+						<div class="fname" id="more">More</div>
+                        
+					</div>
+					<div class="formsBody" id="FormsBody">
+                        <div class="" id="basicForm">
+                            <div>
+                                <div id="userFName">
+                                    <BR><BR><BR><BR><BR><BR><BR><BR>
+                                    <span>First Name</span>
+                                    <span id=userFNameValue></span>
+                                 </div>
+                            </div>
+                            
+                        </div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</body>
+</html>

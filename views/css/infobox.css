@@ -1,0 +1,43 @@
+.fname{
+    //background-color: cornsilk;
+    float: left;
+    align-content: center;
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 10px;
+    font-family:sans-serif;
+    font-size: 15px;
+    opacity: .6;
+}
+
+.fname:hover{
+    background-color: burlywood;
+    animation-fill-mode: backwards;
+    border-bottom-style: groove;
+    opacity:1;
+    
+}
+
+.fname::selection{
+   background-color: red;
+}
+.fname:{
+    background-color: aqua;
+    opacity: .1;
+}
+.formsName{
+    position:absolute;
+    background-color:beige;
+    border-width: thin;
+    border-bottom-color: aqua;
+    
+}
+
+.allForms{
+    width:inherit;
+    
+}
+.formsBody{
+  
+}
