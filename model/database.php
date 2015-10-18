@@ -25,6 +25,7 @@ if ($result->num_rows > 0) {
     $data = $data .'{"name":' .'"' .$row["Name"] . '",' . '"roll":' .'"'. $row["Roll"] .'"}' ;
         $i++;
     }
+    
     echo '{ "record":[' . $data . ']}';
 } else {
     echo "0 results";
